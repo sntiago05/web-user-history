@@ -10,7 +10,7 @@
   <body>
     <header>
       <h1>Santiago</h1>
-      <a href="pets.html">Go to pets</a></li> 
+      <a href="pets.html">Go to pets</a>
     </header>
     <main>
       <section>
@@ -42,10 +42,14 @@
       <section>
         <h2>Contact</h2>
         <form class="form-contact">
-          <label for="inemail"> Enter your email: </label
-          ><input id="inemail" type="email" required />
-          <label for="inphone"> Enter your number phone: </label
-          ><input id="inphone" type="tel" pattern="[0-9]{10}" required />
+          <div class="form-group">
+            <label for="inemail"> Enter your email: </label
+            ><input id="inemail" type="email" required />
+          </div>
+          <div class="form-group">
+            <label for="inphone"> Enter your number phone: </label
+            ><input id="inphone" type="tel" pattern="[0-9]{10}" required />
+          </div>
           <button type="submit">Sent info</button>
         </form>
       </section>
