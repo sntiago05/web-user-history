@@ -3,66 +3,119 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <title>User History</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Portfolio</title>
   </head>
 
   <body>
-    <header>
-      <h1>Santiago</h1>
-      <a href="pets.html">Go to pets</a>
+    <header class="site-header">
+      <span class="logo">Santiago</span>
+      <nav class="main-nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="mascotas.html" class="nav-accent">🐾 Pets</a>
+      </nav>
     </header>
+
     <main>
-      <section>
-        <h2>About Me</h2>
-        <p>
-          Hi! I’m Santiago. I love learning new things, coding, and making small
-          projects. I enjoy exploring tech and creating fun solutions. I like to
-          keep things simple and clear.
+      <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+        <p id="welcome-msg" class="welcome-msg"></p>
+        <p class="about-text">
+          Hi! I'm <strong>Santiago</strong>. I love learning new things, coding,
+          and making small projects. I enjoy exploring tech and creating fun
+          solutions. I like to keep things simple and clear.
+        </p>
+        <button class="btn" id="toggle-btn">Read more ↓</button>
+        <p id="extra-bio" class="extra-bio hidden">
+          When I'm not coding I enjoy reading about science, playing chess, and
+          walking my dog. I'm always looking for the next challenge to level up
+          my skills.
         </p>
       </section>
-      <section>
-        <h2>Projects</h2>
-        <ul>
-          <li class="project-link">
-            <a href="https://github.com/sntiago05/geometric_calculator.git"
-              >Geometric calculator</a
+
+      <section id="projects" class="section">
+        <h2 class="section-title">Projects</h2>
+        <ul class="projects-grid">
+          <li class="project-card">
+            <span class="card-icon">📐</span>
+            <h3>Geometric Calculator</h3>
+            <p>Calculates areas and perimeters of common geometric shapes.</p>
+            <a
+              href="https://github.com/sntiago05/geometric_calculator.git"
+              target="_blank"
+              class="card-link"
+              >View on GitHub →</a
             >
           </li>
-          <li class="project-link">
-            <a href="https://github.com/sntiago05/sala-cine">movie theater</a>
+          <li class="project-card">
+            <span class="card-icon">🎬</span>
+            <h3>Movie Theater</h3>
+            <p>A CLI-based cinema seat booking simulation.</p>
+            <a
+              href="https://github.com/sntiago05/sala-cine"
+              target="_blank"
+              class="card-link"
+              >View on GitHub →</a
+            >
           </li>
-          <li class="project-link">
-            <a href="https://github.com/sntiago05/terminal-souls"
-              >terminal souls</a
+          <li class="project-card">
+            <span class="card-icon">⚔️</span>
+            <h3>Terminal Souls</h3>
+            <p>
+              A text-based RPG adventure inspired by Dark Souls, in the
+              terminal.
+            </p>
+            <a
+              href="https://github.com/sntiago05/terminal-souls"
+              target="_blank"
+              class="card-link"
+              >View on GitHub →</a
             >
           </li>
         </ul>
       </section>
-      <section>
-        <h2>Contact</h2>
-        <form class="form-contact">
+
+      <section id="contact" class="section">
+        <h2 class="section-title">Contact</h2>
+        <form class="form-contact" id="contact-form">
           <div class="form-group">
-            <label for="inemail"> Enter your email: </label
-            ><input id="inemail" type="email" required />
+            <label for="inemail">Email address</label>
+            <input
+              id="inemail"
+              type="email"
+              placeholder="you@example.com"
+              required
+            />
           </div>
           <div class="form-group">
-            <label for="inphone"> Enter your number phone: </label
-            ><input id="inphone" type="tel" pattern="[0-9]{10}" required />
+            <label for="inphone">Phone number</label>
+            <input
+              id="inphone"
+              type="tel"
+              placeholder="3001234567"
+              pattern="[0-9]{10}"
+              required
+            />
           </div>
-          <button type="submit">Sent info</button>
+          <button type="submit" class="btn btn-submit">Send Info</button>
         </form>
+        <p id="form-confirm" class="form-confirm hidden">
+           Thanks! I'll be in touch soon.
+        </p>
       </section>
     </main>
-    <footer>
-      <p class="footer-text">© 2026 Santiago Rodríguez.</p>
+
+    <footer class="site-footer">
+      <p class="footer-text">© 2026 Santiago Rodríguez</p>
       <nav class="footer-nav">
-        <ul class="footer-nav-list">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </nav>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
